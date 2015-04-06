@@ -2,13 +2,19 @@
 <!DOCTYPE HTML>
 <html>
 <body>
-<h1>Article: <%= articleToDisplay.title %></h1>
+	
+	<h1>Article:</h1>
+	<div>
+	 	<%= articlesList.title %>
+	</div>
 <div>
   <ul>
-  	<li>Author: <%= articleToDisplay.author  %></li>
-  	<li>Content: <%= articleToDisplay.content  %></li>
+  	<li>Author: <%= articlesList.author  %></li>
+  	<li>Content: <%= articlesList.content  %></li>
   </ul>
 </div>
+<a href="/articles">Back to Article Index</a><br><br>
+<a href="/">Back to the Main Page</a>
 </body>
 </html>
 
