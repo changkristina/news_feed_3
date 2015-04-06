@@ -72,7 +72,18 @@ app.put('/articles/:id', function(req, res) {
                 res.redirect(articleId);
               });
             });
-})
+});
+
+app.delete('/articles/:id', function (req, res) {
+  var articleId = req.params.id;
+  db.Article.find(articleId)
+            .then(function(articles) {
+              articles.destroy()
+              .then(function() {
+                res.redirect('/articles');
+              });
+            });
+});
 
 app.get('/', function(req,res) {
   res.render('site/index.ejs');

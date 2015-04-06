@@ -13,6 +13,11 @@
   	<li>Content: <%= articlesList.content  %></li>
   </ul>
 </div>
+<form method="POST" action="/articles/<%= articlesList.id %>?_method=DELETE">
+	<button type="submit">Delete Article</button>
+</form>
+<br>
+
 <a href="/articles">Back to Article Index</a><br><br>
 <a href="/">Back to the Main Page</a>
 </body>
